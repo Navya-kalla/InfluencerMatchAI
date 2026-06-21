@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Top Influencer Matches</h1>
+
+    {% if tables %}
+
+    {% for influencer in tables %}
+
+        <div class="card">
+
+            <h2>{{ influencer.Name }}</h2>
+
+            <p>Category: {{ influencer.Category }}</p>
+
+            <p>Followers: {{ influencer.Followers }}</p>
+
+            <p>Engagement Rate: {{ influencer.Engagement_Rate }}%</p>
+
+            <p>Platform: {{ influencer.Platform }}</p>
+
+            <p>Cluster: {{ influencer.Cluster }}</p>
+
+            <p>Collab Cost: ₹{{ influencer.Collab_Cost }}</p>
+
+        </div>
+
+    {% endfor %}
+
+{% else %}
+
+<h2>No Matching Influencers Found</h2>
+
+{% endif %}
+
+    <a href="/">Back</a>
+
+</div>
+
+</body>
+</html>

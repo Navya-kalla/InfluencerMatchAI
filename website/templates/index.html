@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>InfluencerMatchAI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>InfluencerMatchAI</h1>
+        <p>
+Find the best micro-influencers for your brand using
+machine learning-powered recommendations.
+</p>
+
+        <form action="/recommend" method="POST">
+
+            <label>Budget:</label>
+            <input type="number" name="budget" required>
+
+            <label>Category:</label>
+
+            <select name="category">
+
+                {% for category in categories %}
+                <option value="{{ category }}">
+                    {{ category }}
+                </option>
+                {% endfor %}
+
+            </select>
+
+            <button type="submit">
+                Find Influencers
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
