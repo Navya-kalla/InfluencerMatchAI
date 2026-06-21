@@ -6,7 +6,7 @@ InfluencerMatchAI is a machine learning-based influencer recommendation system t
 
 ## Live Demo
 
-🌐 Live Application: https://your-render-link.onrender.com
+🌐 Live Application:https://influencermatchai.onrender.com/
 
 ## Features
 
