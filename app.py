@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request
 import pandas as pd
 
-app = Flask(__name__)
-
-df = pd.read_csv("../dataset/influencer_clustered.csv")
+app = Flask(
+    __name__,
+    template_folder="website/templates",
+    static_folder="website/static"
+)
+df = pd.read_csv("dataset/influencer_clustered.csv")
 
 @app.route("/")
 def home():
